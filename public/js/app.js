@@ -13,7 +13,7 @@ btn.addEventListener('submit',(e)=>{
     uppdt.textContent='Loading...'
 
     const location=inp.value
-    fetch('http://localhost:3000/weather?search='+String(location)).then((response)=>{
+    fetch('/weather?search='+String(location)).then((response)=>{
         response.json().then((data)=>{
             if(data.error)
             {
